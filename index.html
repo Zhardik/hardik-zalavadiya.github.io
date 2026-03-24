@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hardik Zalavadiya — Research Scientist | DLR</title>
+<meta name="description" content="Portfolio of Hardik Zalavadiya — Research Scientist at DLR Institute of Networked Energy Systems. Smart Grids, Renewable Energy, Applied AI in Power Systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ink: #0b0f1a;
+  --ink-90: #141929;
+  --ink-80: #1c2237;
+  --ink-70: #252c45;
+  --ink-60: #343d5c;
+  --graphite: #4a5578;
+  --pewter: #6b7694;
+  --ash: #8d96ae;
+  --mist: #b0b8cc;
+  --fog: #cdd3e2;
+  --cloud: #e4e8f0;
+  --pearl: #f0f2f7;
+  --snow: #f7f8fb;
+  --white: #ffffff;
+  --accent: #b08d3e;
+  --accent-light: #c9a855;
+  --accent-pale: #dfc077;
+  --accent-glow: rgba(176, 141, 62, 0.10);
+  --accent-glow-strong: rgba(176, 141, 62, 0.18);
+  --accent-dark: #8a6e2f;
+  --success: #2d8a5e;
+  --display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --body: 'Manrope', -apple-system, 'Segoe UI', sans-serif;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-xs: 0 1px 2px rgba(11,15,26,0.04);
+  --shadow-sm: 0 2px 8px rgba(11,15,26,0.06);
+  --shadow-md: 0 4px 20px rgba(11,15,26,0.08);
+  --shadow-lg: 0 8px 40px rgba(11,15,26,0.10);
+  --shadow-xl: 0 16px 56px rgba(11,15,26,0.14);
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--body);
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+::selection { background: var(--accent-glow-strong); color: var(--ink); }
+
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(255,255,255,0);
+  backdrop-filter: blur(0px);
+  transition: all 0.5s var(--ease-smooth);
+}
+.nav.scrolled {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 var(--cloud);
+}
+.nav-inner {
+  max-width: 1240px; margin: 0 auto;
+  padding: 0 3rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px;
+  transition: height 0.4s var(--ease-smooth);
+}
+.nav.scrolled .nav-inner { height: 60px; }
+.nav-logo {
+  font-family: var(--display); font-size: 1.6rem; font-weight: 600;
+  color: var(--white); text-decoration: none;
+  letter-spacing: -0.03em;
+  transition: color 0.4s var(--ease-smooth);
+}
+.nav.scrolled .nav-logo { color: var(--ink); }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 0.25rem; list-style: none; }
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  transition: all 0.3s var(--ease-smooth);
+}
+.nav.scrolled .nav-links a { color: var(--graphite); }
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.1); }
+.nav.scrolled .nav-links a:hover { color: var(--accent); background: var(--accent-glow); }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span {
+  display: block; width: 20px; height: 1.5px;
+  background: var(--white); margin: 5px 0;
+  transition: all 0.3s var(--ease-smooth); border-radius: 1px;
+}
+.nav.scrolled .nav-toggle span { background: var(--ink); }
+
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  background: var(--ink);
+  position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 65% 30%, rgba(176,141,62,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 20% 80%, rgba(75,90,140,0.05) 0%, transparent 50%),
+    linear-gradient(175deg, var(--ink) 0%, var(--ink-90) 50%, var(--ink-80) 100%);
+}
+.hero-noise {
+  position: absolute; inset: 0; opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+.hero-lines {
+  position: absolute; inset: 0; overflow: hidden; opacity: 0.04;
+}
+.hero-lines::before, .hero-lines::after {
+  content: ''; position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  height: 1px;
+}
+.hero-lines::before { top: 30%; left: -10%; right: -10%; transform: rotate(-3deg); }
+.hero-lines::after { top: 65%; left: -10%; right: -10%; transform: rotate(2deg); }
+
+.hero-inner {
+  max-width: 1240px; margin: 0 auto; padding: 8rem 3rem 6rem;
+  display: grid; grid-template-columns: 1.1fr 0.9fr;
+  gap: 5rem; align-items: center;
+  position: relative; z-index: 2;
+}
+.hero-text { color: var(--white); }
+.hero-overtitle {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 2rem;
+  opacity: 0; animation: heroFade 1s 0.3s var(--ease-out) forwards;
+}
+.hero-overtitle::before { content: ''; width: 32px; height: 1px; background: var(--accent); }
+.hero-name {
+  font-family: var(--display); font-weight: 500;
+  font-size: clamp(3rem, 5.5vw, 4.5rem);
+  line-height: 1.05; margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  opacity: 0; animation: heroFade 1s 0.5s var(--ease-out) forwards;
+}
+.hero-name em { font-style: italic; color: var(--accent-pale); }
+.hero-subtitle {
+  font-size: 1.1rem; color: var(--mist);
+  font-weight: 300; line-height: 1.8;
+  max-width: 500px; margin-bottom: 2.5rem;
+  opacity: 0; animation: heroFade 1s 0.7s var(--ease-out) forwards;
+}
+.hero-actions {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  opacity: 0; animation: heroFade 1s 0.9s var(--ease-out) forwards;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 0.8rem 2rem;
+  font-family: var(--body); font-size: 0.8rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  border-radius: 6px; text-decoration: none;
+  transition: all 0.35s var(--ease-out); cursor: pointer; border: none;
+  position: relative; overflow: hidden;
+}
+.btn-gold { background: var(--accent); color: var(--ink); }
+.btn-gold:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(176,141,62,0.25); }
+.btn-ghost { background: transparent; color: var(--mist); border: 1px solid rgba(255,255,255,0.15); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent-light); background: rgba(176,141,62,0.06); }
+.btn-arrow { transition: transform 0.3s var(--ease-out); }
+.btn:hover .btn-arrow { transform: translateX(3px); }
+
+.hero-photo {
+  display: flex; justify-content: center;
+  opacity: 0; animation: heroFade 1.2s 0.6s var(--ease-out) forwards;
+}
+.photo-container { position: relative; width: 340px; height: 420px; }
+.photo-frame {
+  position: absolute; inset: 0;
+  border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.photo-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  filter: contrast(1.04) brightness(1.02);
+}
+.photo-accent {
+  position: absolute; top: -16px; right: -16px;
+  width: 100%; height: 100%;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-lg); opacity: 0.5;
+}
+.photo-dot-grid {
+  position: absolute; bottom: -30px; left: -30px;
+  width: 80px; height: 80px;
+  background-image: radial-gradient(circle, var(--accent) 1px, transparent 1px);
+  background-size: 10px 10px; opacity: 0.3;
+}
+
+.hero-stats {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 10;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: rgba(11,15,26,0.5); backdrop-filter: blur(12px);
+}
+.hero-stats-inner {
+  max-width: 1240px; margin: 0 auto; padding: 1.5rem 3rem;
+  display: flex; justify-content: space-between;
+}
+.hero-stat {
+  text-align: center;
+  opacity: 0; animation: heroFade 0.8s var(--ease-out) forwards;
+}
+.hero-stat:nth-child(1) { animation-delay: 1.1s; }
+.hero-stat:nth-child(2) { animation-delay: 1.2s; }
+.hero-stat:nth-child(3) { animation-delay: 1.3s; }
+.hero-stat:nth-child(4) { animation-delay: 1.4s; }
+.hero-stat-num {
+  font-family: var(--display); font-size: 1.8rem; font-weight: 600;
+  color: var(--accent-light); line-height: 1;
+}
+.hero-stat-label {
+  font-size: 0.68rem; color: var(--ash);
+  text-transform: uppercase; letter-spacing: 0.12em;
+  font-weight: 600; margin-top: 4px;
+}
+@keyframes heroFade {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section { padding: 7rem 3rem; }
+.section--alt { background: var(--snow); }
+.section--dark { background: var(--ink); color: var(--white); }
+.container { max-width: 1100px; margin: 0 auto; }
+.section-eyebrow {
+  font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent);
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 0.75rem;
+}
+.section-eyebrow::before { content: ''; width: 24px; height: 1.5px; background: var(--accent); }
+.section-heading {
+  font-family: var(--display); font-weight: 500;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1rem;
+}
+.section-heading em { font-style: italic; color: var(--accent); }
+.section-desc {
+  font-size: 1.05rem; color: var(--pewter);
+  max-width: 580px; line-height: 1.8; font-weight: 300;
+}
+.section-header { margin-bottom: 4rem; }
+.section-header--center { text-align: center; }
+.section-header--center .section-eyebrow { justify-content: center; }
+.section-header--center .section-desc { margin: 0 auto; }
+
+.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+
+.about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.about-prose p { color: var(--graphite); font-size: 1.02rem; margin-bottom: 1.25rem; line-height: 1.85; }
+.about-prose strong { color: var(--ink); font-weight: 600; }
+.about-cards { display: flex; flex-direction: column; gap: 1rem; }
+.about-card {
+  display: flex; align-items: center; gap: 1.25rem;
+  padding: 1.25rem 1.5rem; background: var(--white);
+  border: 1px solid var(--cloud); border-radius: var(--radius);
+  transition: all 0.35s var(--ease-out);
+}
+.about-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm), 0 0 0 3px var(--accent-glow); transform: translateX(4px); }
+.about-card-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--accent-glow-strong), var(--accent-glow));
+  border-radius: var(--radius-sm); color: var(--accent);
+}
+.about-card-icon svg { width: 20px; height: 20px; }
+.about-card-label { font-size: 0.65rem; font-weight: 700; color: var(--ash); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2px; }
+.about-card-value { font-weight: 600; font-size: 0.92rem; color: var(--ink); }
+
+.exp-timeline { position: relative; padding-left: 3rem; }
+.exp-timeline::before {
+  content: ''; position: absolute;
+  left: 7px; top: 8px; bottom: 8px; width: 1.5px;
+  background: linear-gradient(to bottom, var(--accent), var(--cloud) 30%, var(--cloud) 70%, transparent);
+}
+.exp-item { position: relative; margin-bottom: 3rem; padding-left: 2rem; }
+.exp-item:last-child { margin-bottom: 0; }
+.exp-dot {
+  position: absolute; left: -3rem; top: 6px;
+  width: 16px; height: 16px; background: var(--white);
+  border: 2.5px solid var(--accent); border-radius: 50%; z-index: 2;
+}
+.exp-item:first-child .exp-dot { background: var(--accent); box-shadow: 0 0 0 4px var(--accent-glow-strong); }
+.exp-card {
+  background: var(--white); border: 1px solid var(--cloud);
+  border-radius: var(--radius-lg); padding: 2rem 2.25rem;
+  transition: all 0.4s var(--ease-out); position: relative;
+}
+.exp-card::before {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 3px; height: 0; background: var(--accent);
+  border-radius: 3px 0 0 3px; transition: height 0.4s var(--ease-out);
+}
+.exp-card:hover { border-color: rgba(176,141,62,0.25); box-shadow: var(--shadow-md); }
+.exp-card:hover::before { height: 100%; }
+.exp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+.exp-role { font-family: var(--display); font-size: 1.35rem; font-weight: 600; color: var(--ink); letter-spacing: -0.02em; }
+.exp-date {
+  font-size: 0.72rem; font-weight: 700; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 0.3rem 0.75rem; background: var(--accent-glow);
+  border-radius: 20px; white-space: nowrap;
+}
+.exp-company { font-size: 0.88rem; color: var(--pewter); font-weight: 500; margin-bottom: 1rem; display: flex; align-items: center; gap: 6px; }
+.exp-company svg { width: 14px; height: 14px; opacity: 0.5; }
+.exp-desc { font-size: 0.9rem; color: var(--graphite); line-height: 1.75; }
+.exp-bullets { list-style: none; margin-top: 0.75rem; }
+.exp-bullets li { position: relative; padding-left: 1.25rem; margin-bottom: 0.5rem; font-size: 0.88rem; color: var(--graphite); line-height: 1.7; }
+.exp-bullets li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.75rem; }
+.proj-card {
+  background: var(--white); border: 1px solid var(--cloud);
+  border-radius: var(--radius-lg); overflow: hidden;
+  transition: all 0.4s var(--ease-out); display: flex; flex-direction: column;
+}
+.proj-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); border-color: rgba(176,141,62,0.2); }
+.proj-ribbon { height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-pale)); }
+.proj-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
+.proj-type { font-size: 0.62rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+.proj-title { font-family: var(--display); font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: 0.4rem; letter-spacing: -0.02em; line-height: 1.25; }
+.proj-period { font-size: 0.78rem; color: var(--ash); font-weight: 500; margin-bottom: 1rem; }
+.proj-summary { font-size: 0.88rem; color: var(--graphite); line-height: 1.75; flex: 1; margin-bottom: 1.5rem; }
+.proj-techs { display: flex; flex-wrap: wrap; gap: 6px; }
+.proj-tech {
+  font-size: 0.68rem; font-weight: 700; padding: 0.25rem 0.65rem;
+  border-radius: 4px; background: var(--pearl); color: var(--graphite);
+  letter-spacing: 0.02em; transition: all 0.25s var(--ease-smooth);
+}
+.proj-card:hover .proj-tech { background: var(--accent-glow); color: var(--accent-dark); }
+
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.skill-group { margin-bottom: 2.5rem; }
+.skill-group:last-child { margin-bottom: 0; }
+.skill-group-title {
+  font-family: var(--display); font-size: 1.2rem; font-weight: 600;
+  color: var(--ink); margin-bottom: 1rem; padding-bottom: 0.75rem;
+  border-bottom: 1.5px solid var(--cloud);
+  display: flex; align-items: center; gap: 10px;
+}
+.skill-group-title::before { content: ''; width: 8px; height: 8px; background: var(--accent); border-radius: 2px; flex-shrink: 0; }
+.skill-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-pill {
+  padding: 0.5rem 1.1rem; font-size: 0.82rem; font-weight: 500;
+  border: 1px solid var(--cloud); border-radius: 100px;
+  color: var(--graphite); background: var(--white);
+  transition: all 0.3s var(--ease-out); cursor: default;
+}
+.skill-pill:hover { border-color: var(--accent); color: var(--accent-dark); background: var(--accent-glow); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+
+.certs-section-title {
+  font-family: var(--display); font-size: 1.3rem; font-weight: 600;
+  color: var(--ink); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 10px;
+}
+.certs-section-title::before { content: ''; width: 8px; height: 8px; background: var(--accent); border-radius: 2px; }
+.cert-row {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.85rem 1.25rem; border: 1px solid var(--cloud);
+  border-radius: var(--radius); margin-bottom: 0.6rem;
+  background: var(--white); transition: all 0.3s var(--ease-out);
+  font-size: 0.88rem; color: var(--graphite);
+}
+.cert-row:hover { border-color: var(--accent); transform: translateX(4px); }
+.cert-icon {
+  width: 32px; height: 32px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--accent-glow); border-radius: 6px;
+  font-size: 0.65rem; font-weight: 800; color: var(--accent); letter-spacing: 0.03em;
+}
+
+.edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.edu-card {
+  background: var(--ink-90); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-lg); padding: 2.25rem 2rem;
+  transition: all 0.4s var(--ease-out); position: relative; overflow: hidden;
+}
+.edu-card::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-pale));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.5s var(--ease-out);
+}
+.edu-card:hover::after { transform: scaleX(1); }
+.edu-card:hover { border-color: rgba(176,141,62,0.2); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
+.edu-icon {
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(176,141,62,0.12); border-radius: var(--radius);
+  color: var(--accent-light); margin-bottom: 1.25rem;
+}
+.edu-icon svg { width: 20px; height: 20px; }
+.edu-degree { font-family: var(--display); font-size: 1.2rem; font-weight: 600; color: var(--white); line-height: 1.3; margin-bottom: 0.6rem; }
+.edu-school { color: var(--accent-light); font-weight: 600; font-size: 0.88rem; margin-bottom: 0.25rem; }
+.edu-year { color: var(--ash); font-size: 0.8rem; font-weight: 500; margin-bottom: 0.75rem; }
+.edu-note { color: var(--mist); font-size: 0.84rem; line-height: 1.6; }
+
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.contact-prose h3 { font-family: var(--display); font-size: 1.8rem; font-weight: 500; margin-bottom: 1rem; letter-spacing: -0.02em; }
+.contact-prose p { color: var(--graphite); font-size: 1.02rem; line-height: 1.8; margin-bottom: 2.5rem; }
+.contact-items { display: flex; flex-direction: column; gap: 1rem; }
+.contact-item {
+  display: flex; align-items: center; gap: 1.1rem;
+  text-decoration: none; color: var(--ink);
+  padding: 1rem 1.25rem; border-radius: var(--radius);
+  transition: all 0.3s var(--ease-out); border: 1px solid transparent;
+}
+.contact-item:hover { background: var(--pearl); border-color: var(--cloud); }
+.contact-item-icon {
+  width: 48px; height: 48px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--accent-glow); border-radius: var(--radius);
+  color: var(--accent); transition: all 0.3s var(--ease-out);
+}
+.contact-item:hover .contact-item-icon { background: var(--accent); color: var(--white); }
+.contact-item-icon svg { width: 20px; height: 20px; }
+.contact-item-label { font-size: 0.65rem; font-weight: 700; color: var(--ash); text-transform: uppercase; letter-spacing: 0.1em; }
+.contact-item-value { font-weight: 600; font-size: 0.92rem; }
+
+.contact-form-wrap { background: var(--snow); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--cloud); }
+.form-row { margin-bottom: 1.25rem; }
+.form-row label { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--graphite); margin-bottom: 0.5rem; }
+.form-row input, .form-row textarea {
+  width: 100%; padding: 0.85rem 1.1rem;
+  font-family: var(--body); font-size: 0.92rem;
+  border: 1.5px solid var(--cloud); border-radius: var(--radius);
+  background: var(--white); color: var(--ink);
+  transition: all 0.3s var(--ease-smooth); outline: none;
+}
+.form-row input::placeholder, .form-row textarea::placeholder { color: var(--mist); }
+.form-row input:focus, .form-row textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+.form-row textarea { resize: vertical; min-height: 130px; }
+.form-btn {
+  width: 100%; padding: 0.95rem;
+  font-family: var(--body); font-weight: 700;
+  font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--ink); color: var(--white);
+  border: none; border-radius: var(--radius);
+  cursor: pointer; transition: all 0.35s var(--ease-out);
+}
+.form-btn:hover { background: var(--accent); color: var(--ink); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+.footer {
+  background: var(--ink); color: var(--ash);
+  padding: 3rem; border-top: 1px solid rgba(255,255,255,0.04);
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+}
+.footer-text { font-size: 0.82rem; }
+.footer-text a { color: var(--accent-light); text-decoration: none; }
+.footer-social { display: flex; gap: 0.75rem; }
+.footer-social a {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255,255,255,0.1); border-radius: 50%;
+  color: var(--ash); transition: all 0.3s var(--ease-out);
+}
+.footer-social a:hover { border-color: var(--accent); color: var(--accent-light); background: rgba(176,141,62,0.08); }
+.footer-social a svg { width: 15px; height: 15px; }
+
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 3rem; padding-top: 7rem; }
+  .hero-subtitle { max-width: 100%; margin-left: auto; margin-right: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-photo { order: -1; }
+  .photo-container { width: 280px; height: 340px; }
+  .hero-overtitle { justify-content: center; }
+  .hero-overtitle::before { display: none; }
+  .about-layout { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .edu-grid { grid-template-columns: 1fr; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .hero-stats-inner { flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 72px; left: 0; right: 0;
+    background: rgba(255,255,255,0.98); backdrop-filter: blur(20px);
+    padding: 1.5rem 2rem 2rem;
+    border-bottom: 1px solid var(--cloud); box-shadow: var(--shadow-lg); gap: 0.5rem;
+  }
+  .nav-links.open a { color: var(--graphite) !important; padding: 0.6rem 1rem; }
+  .nav-toggle { display: block; }
+  .section { padding: 5rem 1.5rem; }
+  .nav-inner { padding: 0 1.5rem; }
+  .hero-inner { padding: 7rem 1.5rem 5rem; }
+  .hero-stats-inner { padding: 1.5rem; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .photo-container { width: 240px; height: 300px; }
+  .footer-inner { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Hardik<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-noise"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-overtitle">Research Scientist at DLR</div>
+      <h1 class="hero-name">Hardik<br>Zalavadiya</h1>
+      <p class="hero-subtitle">Building intelligent control systems for the energy transition — smart grids, applied AI, and renewable energy integration at the German Aerospace Center.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-gold">Get in Touch <span class="btn-arrow">&rarr;</span></a>
+        <a href="#experience" class="btn btn-ghost">View Experience</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="photo-container">
+        <div class="photo-accent"></div>
+        <div class="photo-frame">
+          <img src="hardik_jpg.png" alt="Hardik Zalavadiya">
+        </div>
+        <div class="photo-dot-grid"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stats-inner">
+      <div class="hero-stat"><div class="hero-stat-num">5+</div><div class="hero-stat-label">Years in Energy</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">3</div><div class="hero-stat-label">Countries Worked</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">10+</div><div class="hero-stat-label">Certifications</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">4</div><div class="hero-stat-label">Languages Spoken</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="about">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">About Me</div>
+      <h2 class="section-heading">Bridging Power Systems<br>& <em>Artificial Intelligence</em></h2>
+    </div>
+    <div class="about-layout">
+      <div class="about-prose reveal reveal-d1">
+        <p>I am a Research Scientist at the <strong>DLR Institute of Networked Energy Systems</strong> in Oldenburg, Germany, where I develop AI-driven control strategies for smart grid voltage regulation, renewable energy integration, and distributed energy management.</p>
+        <p>My work sits at the intersection of power systems engineering and applied machine learning — designing reinforcement learning controllers, co-simulation frameworks connecting MATLAB/Simulink with Python-based algorithms, and real-time monitoring dashboards for grid operations.</p>
+        <p>With a background in <strong>M.Sc. Mechatronics</strong> from Universität Siegen and hands-on industry experience as an electrical engineer in India's power distribution sector, I bring a unique blend of theoretical depth and practical engineering to every project.</p>
+      </div>
+      <div class="about-cards reveal reveal-d2">
+        <div class="about-card">
+          <div class="about-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="about-card-label">Location</div><div class="about-card-value">Oldenburg, Germany</div></div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg></div>
+          <div><div class="about-card-label">Current Role</div><div class="about-card-value">Research Scientist, DLR</div></div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg></div>
+          <div><div class="about-card-label">Education</div><div class="about-card-value">M.Sc. Mechatronics, Uni Siegen</div></div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg></div>
+          <div><div class="about-card-label">Languages</div><div class="about-card-value">English · Hindi · Gujarati · German</div></div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div><div class="about-card-label">Focus Areas</div><div class="about-card-value">Smart Grids · RL Control · PV Forecasting</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Career Path</div>
+      <h2 class="section-heading">Professional <em>Experience</em></h2>
+      <p class="section-desc">From power distribution engineering in India to AI-driven smart grid research at DLR in Germany.</p>
+    </div>
+    <div class="exp-timeline">
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">Research Scientist</div><div class="exp-date">Apr 2025 — Present</div></div>
+          <div class="exp-company"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg> DLR Institute of Networked Energy Systems · Oldenburg, Germany</div>
+          <div class="exp-desc">Developing AI-driven smart grid control systems, reinforcement learning-based voltage regulation, and real-time co-simulation frameworks for distributed energy management and renewable integration.</div>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">Master Thesis Student</div><div class="exp-date">Aug 2024 — Mar 2025</div></div>
+          <div class="exp-company"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg> DLR &amp; Universität Siegen · Oldenburg, Germany</div>
+          <ul class="exp-bullets">
+            <li>Developed RL-based voltage control using short-term PV forecasts for grid stability</li>
+            <li>Built co-simulation framework integrating MATLAB/Simulink with Python RL controllers via Mosaik</li>
+            <li>Designed Random Forest voltage forecasting model using Eye2Sky irradiance data</li>
+            <li>Trained PPO/DDPG controllers for adaptive power flow decisions</li>
+            <li>Validated on DLR NESTEC lab digital twin under multiple grid conditions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">Project Intern</div><div class="exp-date">Jun 2024 — Aug 2024</div></div>
+          <div class="exp-company"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg> DLR Institute of Networked Energy Systems · Oldenburg, Germany</div>
+          <ul class="exp-bullets">
+            <li>Developed real-time co-simulation connecting Simulink with Python/C++ controllers</li>
+            <li>Created and validated high-fidelity digital twin of the NESTEC grid</li>
+            <li>Benchmarked HTTP, UDP, MQTT — MQTT achieved 89%+ performance improvement</li>
+            <li>Enabled RL controller integration and hardware-in-the-loop testing foundation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">Research &amp; Teaching Assistant</div><div class="exp-date">Oct 2022 — Sep 2023</div></div>
+          <div class="exp-company"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg> Universität Siegen · Siegen, Germany</div>
+          <ul class="exp-bullets">
+            <li>Supported Embedded Systems department — Qt Creator, Python, Raspberry Pi, C++</li>
+            <li>Conducted lab sessions and mentored students in embedded systems projects</li>
+            <li>Applied ML techniques to develop models for embedded applications</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">Senior Electrical Engineer</div><div class="exp-date">Mar 2019 — Apr 2021</div></div>
+          <div class="exp-company"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Chief Electricals · Surat, India</div>
+          <ul class="exp-bullets">
+            <li>Maintenance, operation and testing of 11kV/440V substation equipment</li>
+            <li>Led electrical safety audits, design planning and engineering consultancy</li>
+            <li>Managed shutdown operations on transformers, circuit breakers and feeder panels</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">Lecturer</div><div class="exp-date">Oct 2017 — May 2020</div></div>
+          <div class="exp-company"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg> Oscar Engineering Classes · Surat, India</div>
+          <div class="exp-desc">Taught electrical, electronics, and computer engineering courses. Designed examination materials, organized lab sessions, and led extracurricular program planning.</div>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">Junior Executive</div><div class="exp-date">Jul 2016 — Sep 2017</div></div>
+          <div class="exp-company"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Torrent Power Ltd · Surat, India</div>
+          <ul class="exp-bullets">
+            <li>Planned and developed distribution network — 18% reduction in cable faults</li>
+            <li>Optimized workforce and workflow — 10% efficiency increase in year one</li>
+            <li>Oversaw installation, operation and maintenance of power network</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="projects">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-eyebrow">Research &amp; Projects</div>
+      <h2 class="section-heading">Selected <em>Work</em></h2>
+      <p class="section-desc">A curated selection of research projects spanning AI-driven energy systems, embedded controls, and smart metering.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="proj-card reveal reveal-d1">
+        <div class="proj-ribbon"></div>
+        <div class="proj-body">
+          <div class="proj-type">Master Thesis</div>
+          <div class="proj-title">RL-Based Voltage Control with PV Forecasting</div>
+          <div class="proj-period">Aug 2024 — Mar 2025 · DLR &amp; Universität Siegen</div>
+          <div class="proj-summary">Developed a reinforcement learning voltage control system integrating short-term photovoltaic forecasts for improved grid stability. Built co-simulation connecting MATLAB/Simulink with Python RL agents (PPO/DDPG) via Mosaik, validated on DLR NESTEC lab digital twin.</div>
+          <div class="proj-techs">
+            <span class="proj-tech">Python</span><span class="proj-tech">MATLAB/Simulink</span><span class="proj-tech">Mosaik</span><span class="proj-tech">PPO/DDPG</span><span class="proj-tech">Random Forest</span><span class="proj-tech">Eye2Sky</span>
+          </div>
+        </div>
+      </div>
+      <div class="proj-card reveal reveal-d2">
+        <div class="proj-ribbon"></div>
+        <div class="proj-body">
+          <div class="proj-type">Research Project</div>
+          <div class="proj-title">Real-Time Co-Simulation for Smart Grids</div>
+          <div class="proj-period">Jun 2024 — Aug 2024 · DLR</div>
+          <div class="proj-summary">Developed a real-time co-simulation framework benchmarking HTTP, UDP, and MQTT protocols. Achieved 89%+ performance improvement with MQTT. Created a high-fidelity NESTEC digital twin and enabled RL controller integration.</div>
+          <div class="proj-techs">
+            <span class="proj-tech">MATLAB/Simulink</span><span class="proj-tech">Python</span><span class="proj-tech">C++</span><span class="proj-tech">MQTT</span><span class="proj-tech">UDP</span><span class="proj-tech">Digital Twin</span>
+          </div>
+        </div>
+      </div>
+      <div class="proj-card reveal reveal-d3">
+        <div class="proj-ribbon"></div>
+        <div class="proj-body">
+          <div class="proj-type">Academic Project</div>
+          <div class="proj-title">Explainable AI for Time Series</div>
+          <div class="proj-period">Apr 2023 — Nov 2023 · Universität Siegen</div>
+          <div class="proj-summary">Developed an XAI solution for time series datasets, combining advanced ML with interpretability. Implemented visualization techniques for temporal trend analysis with high predictive accuracy and transparent decision-making.</div>
+          <div class="proj-techs">
+            <span class="proj-tech">Python</span><span class="proj-tech">XAI</span><span class="proj-tech">Time Series</span><span class="proj-tech">Machine Learning</span>
+          </div>
+        </div>
+      </div>
+      <div class="proj-card reveal reveal-d1">
+        <div class="proj-ribbon"></div>
+        <div class="proj-body">
+          <div class="proj-type">Academic Project</div>
+          <div class="proj-title">Environmental Control Box</div>
+          <div class="proj-period">Apr 2023 — Sep 2023 · Universität Siegen</div>
+          <div class="proj-summary">Designed and deployed an environment control system with real-time regulation. Integrated sensor network with actuators and live camera monitoring, applying ML for data-driven optimization of conditions.</div>
+          <div class="proj-techs">
+            <span class="proj-tech">Embedded Systems</span><span class="proj-tech">Sensors</span><span class="proj-tech">ML</span><span class="proj-tech">Raspberry Pi</span>
+          </div>
+        </div>
+      </div>
+      <div class="proj-card reveal reveal-d2">
+        <div class="proj-ribbon"></div>
+        <div class="proj-body">
+          <div class="proj-type">Bachelor Thesis</div>
+          <div class="proj-title">AI-Based Energy Meter</div>
+          <div class="proj-period">Jul 2019 — Mar 2020 · RNGPIT</div>
+          <div class="proj-summary">Pioneered an AI-based energy meter with dual billing, funded by Govt. of Gujarat. Integrated Wi-Fi for real-time monitoring with GSM/satellite scalability, aligned with India's smart city initiative.</div>
+          <div class="proj-techs">
+            <span class="proj-tech">AI/ML</span><span class="proj-tech">IoT</span><span class="proj-tech">Wi-Fi</span><span class="proj-tech">Smart Metering</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Competencies</div>
+      <h2 class="section-heading">Skills &amp; <em>Certifications</em></h2>
+    </div>
+    <div class="skills-grid">
+      <div class="reveal reveal-d1">
+        <div class="skill-group">
+          <div class="skill-group-title">Programming &amp; Frameworks</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span><span class="skill-pill">C++</span><span class="skill-pill">MATLAB / Simulink</span><span class="skill-pill">PyTorch</span><span class="skill-pill">TensorFlow</span><span class="skill-pill">React / TypeScript</span><span class="skill-pill">PLC Programming</span><span class="skill-pill">Assembly</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">AI &amp; Machine Learning</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Reinforcement Learning</span><span class="skill-pill">PPO / DDPG</span><span class="skill-pill">Deep Learning</span><span class="skill-pill">Random Forest</span><span class="skill-pill">Explainable AI</span><span class="skill-pill">Time Series Forecasting</span><span class="skill-pill">Neuro-Fuzzy Control</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Smart Grid &amp; Energy</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Voltage Control Systems</span><span class="skill-pill">PV Forecasting</span><span class="skill-pill">Co-Simulation (Mosaik)</span><span class="skill-pill">UDP / MQTT</span><span class="skill-pill">Digital Twin Modeling</span><span class="skill-pill">EV / V2G Integration</span><span class="skill-pill">Real-Time Control</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Tools &amp; Platforms</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Git / GitHub</span><span class="skill-pill">GCP</span><span class="skill-pill">AWS</span><span class="skill-pill">Azure ML Studio</span><span class="skill-pill">SAP</span><span class="skill-pill">AutoCAD</span><span class="skill-pill">Qt Creator</span><span class="skill-pill">Dewesoft</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="certs-section-title">Certifications</div>
+        <div style="margin-bottom:2rem;">
+          <div class="cert-row"><div class="cert-icon">GCP</div> Google Cloud Platform Fundamentals</div>
+          <div class="cert-row"><div class="cert-icon">AWS</div> Fundamentals for AWS Professionals</div>
+          <div class="cert-row"><div class="cert-icon">GCP</div> Modernizing Data Lakes &amp; Warehouses</div>
+          <div class="cert-row"><div class="cert-icon">GCP</div> How Google Does Machine Learning</div>
+          <div class="cert-row"><div class="cert-icon">AZ</div> Predictive Modelling with Azure ML</div>
+          <div class="cert-row"><div class="cert-icon">GCP</div> Essential GCP Infrastructure: Foundation</div>
+          <div class="cert-row"><div class="cert-icon">TF</div> Machine Learning with TensorFlow on GCP</div>
+          <div class="cert-row"><div class="cert-icon">IoT</div> Introduction to Programming IoT</div>
+          <div class="cert-row"><div class="cert-icon">⚡</div> Solar Energy Basics &amp; Solar Cells</div>
+          <div class="cert-row"><div class="cert-icon">⚡</div> Electric Industry Operations &amp; Markets</div>
+        </div>
+        <div class="certs-section-title">Honors &amp; Awards</div>
+        <div class="cert-row"><div class="cert-icon">🏆</div> Dewang Mehta IT Awards</div>
+        <div class="cert-row"><div class="cert-icon">🥇</div> First Ranker Award (×2)</div>
+        <div class="cert-row"><div class="cert-icon">📄</div> Poster &amp; Paper Presentation Awards</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark" id="education">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-eyebrow">Academic Background</div>
+      <h2 class="section-heading" style="color:var(--white)">Education</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal reveal-d1">
+        <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg></div>
+        <div class="edu-degree">Master of Science in Mechatronics</div>
+        <div class="edu-school">Universität Siegen</div>
+        <div class="edu-year">October 2021 — March 2025</div>
+        <div class="edu-note">Thesis at DLR on RL-based voltage control with PV forecasting for smart grid stability</div>
+      </div>
+      <div class="edu-card reveal reveal-d2">
+        <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg></div>
+        <div class="edu-degree">Bachelor of Engineering in Electrical Engineering</div>
+        <div class="edu-school">R. N. G. Patel Institute of Technology</div>
+        <div class="edu-year">September 2017 — August 2020</div>
+        <div class="edu-note">9.46 CGPA · AI-based Energy Meter thesis funded by Government of Gujarat</div>
+      </div>
+      <div class="edu-card reveal reveal-d3">
+        <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg></div>
+        <div class="edu-degree">Diploma in Electrical Engineering</div>
+        <div class="edu-school">Dr. S. &amp; S.S. Gandhi College of Engineering</div>
+        <div class="edu-year">2013 — 2016</div>
+        <div class="edu-note">Surat, India · Foundation in electrical engineering principles and power systems</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-eyebrow">Let's Connect</div>
+      <h2 class="section-heading">Get in <em>Touch</em></h2>
+      <p class="section-desc">Whether it's a research collaboration, speaking opportunity, or a conversation about the future of smart grids — I'd love to hear from you.</p>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-prose reveal reveal-d1">
+        <div class="contact-items">
+          <a href="mailto:zalavadiyahardik84@gmail.com" class="contact-item">
+            <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+            <div><div class="contact-item-label">Email</div><div class="contact-item-value">zalavadiyahardik84@gmail.com</div></div>
+          </a>
+          <a href="tel:+491776557957" class="contact-item">
+            <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><div class="contact-item-label">Phone</div><div class="contact-item-value">+49 177 655 7957</div></div>
+          </a>
+          <a href="https://www.linkedin.com/in/hardik-zalavadiya" target="_blank" class="contact-item">
+            <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+            <div><div class="contact-item-label">LinkedIn</div><div class="contact-item-value">linkedin.com/in/hardik-zalavadiya</div></div>
+          </a>
+          <div class="contact-item">
+            <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="contact-item-label">Location</div><div class="contact-item-value">Oldenburg, Lower Saxony, Germany</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-d2">
+        <form class="contact-form-wrap" onsubmit="handleSubmit(event)">
+          <div class="form-row"><label for="name">Full Name</label><input type="text" id="name" placeholder="Your name" required></div>
+          <div class="form-row"><label for="email">Email Address</label><input type="email" id="email" placeholder="you@example.com" required></div>
+          <div class="form-row"><label for="subject">Subject</label><input type="text" id="subject" placeholder="What's this about?"></div>
+          <div class="form-row"><label for="message">Message</label><textarea id="message" placeholder="Your message..." required></textarea></div>
+          <button type="submit" class="form-btn">Send Message &rarr;</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-text">&copy; 2026 Hardik Zalavadiya · Built with purpose.</div>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/hardik-zalavadiya" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="mailto:zalavadiyahardik84@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60), { passive: true });
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+const sections = document.querySelectorAll('section[id]');
+const navItems = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY + 100;
+  sections.forEach(s => {
+    if (y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) {
+      navItems.forEach(a => { a.style.opacity = a.getAttribute('href') === '#' + s.id ? '1' : ''; });
+    }
+  });
+}, { passive: true });
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-btn');
+  btn.textContent = '✓ Message Sent!';
+  btn.style.background = '#2d8a5e'; btn.style.color = '#fff';
+  setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; btn.style.color = ''; e.target.reset(); }, 3000);
+}
+</script>
+</body>
+</html>
